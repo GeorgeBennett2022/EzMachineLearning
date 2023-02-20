@@ -65,7 +65,7 @@ namespace EzMachineLearning.Linear
                 error[i] = y[i] - Aggregate(x[i]);
             }
             double loss = LossFunctions.LossFunctions.LossFuncs[loss_function](error);
-
+            Tune(loss);
         }
 
         /// <summary>
