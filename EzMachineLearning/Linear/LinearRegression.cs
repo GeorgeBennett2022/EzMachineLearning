@@ -64,6 +64,7 @@ namespace EzMachineLearning.Linear
             {
                 error[i] = y[i] - Aggregate(x[i]);
             }
+
             double loss = LossFunctions.LossFunctions.LossFuncs[loss_function](error);
             Tune(loss);
         }
@@ -89,7 +90,6 @@ namespace EzMachineLearning.Linear
         {
             for(int i = 0; i < weights.Length; i++)
             {
-                weights[i] = weights[i] - (weights[i] * loss * learning_rate);
             }
         }
 
